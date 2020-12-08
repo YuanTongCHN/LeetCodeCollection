@@ -16,13 +16,13 @@ class Solution {
         int thousand = num / 1000;
         num = num % 1000;
         StringBuffer str = new StringBuffer();
-        if(billion!=0){
+        if (billion != 0) {
             str.append(three(billion)).append(" Billion ");
         }
-        if(million!=0){
+        if (million != 0) {
             str.append(three(million)).append(" Million ");
         }
-        if(thousand!=0){
+        if (thousand != 0) {
             str.append(three(thousand)).append(" Thousand ");
         }
         str.append(three(num));
@@ -102,13 +102,13 @@ class Solution {
     }
 
     private String two(int num) {
-        if(num == 0){
+        if (num == 0) {
             return "";
-        }else if (num < 10) {
+        } else if (num < 10) {
             return one(num);
-        }else if(num < 20){
+        } else if (num < 20) {
             return twoLessThan20(num);
-        }else{
+        } else {
             int tens = num / 10;
             int units = num % 10;
             StringBuffer str = new StringBuffer();
@@ -117,11 +117,11 @@ class Solution {
         }
     }
 
-    private String three(int num){
+    private String three(int num) {
         int hundred = num / 100;
         int rest = num % 100;
         StringBuffer str = new StringBuffer();
-        if(hundred != 0){
+        if (hundred != 0) {
             str.append(one(hundred)).append(" Hundred ");
         }
         str.append(two(rest));
