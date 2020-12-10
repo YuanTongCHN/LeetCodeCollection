@@ -1,5 +1,7 @@
 package indi.yuantongchn.LC7;
 
+//7. 整数反转
+
 class Solution {
     public int reverse(int x) {
         if (x == 0) {
