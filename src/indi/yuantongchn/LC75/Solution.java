@@ -5,9 +5,9 @@ package indi.yuantongchn.LC75;
 class Solution {
 
     /*
-     * [zero, i) == 0
-     * [i, two) == 1
-     * [two, len - 1] == 2
+     *
+     *
+     *
      * */
     public void sortColors(int[] nums) {
         if (nums.length == 0) {
@@ -15,8 +15,8 @@ class Solution {
         }
         int zero = 0;
         int i = 0;
-        int two = nums.length; //保证闭区间一开始不包含元素
-        while (i < two) {
+        int two = nums.length - 1;
+        while (i <= two) {
             if (nums[i] == 0) {
                 Swap(nums, zero, i);
                 zero++;
@@ -24,8 +24,8 @@ class Solution {
             } else if (nums[i] == 1) {
                 i++;
             } else {
-                two--;
                 Swap(nums, i, two);
+                two--;
             }
         }
         return;
