@@ -23,11 +23,11 @@ class Solution {
             }
         });
         PriorityQueue<Integer> endTimes = new PriorityQueue<>();
-        for(int i=0;i<len;i++){
-            if(endTimes.isEmpty() || endTimes.peek() > intervals[i][0]){
+        for (int i = 0; i < len; i++) {
+            if (endTimes.isEmpty() || endTimes.peek() > intervals[i][0]) {
                 count++;
                 endTimes.add(intervals[i][1]);
-            }else{
+            } else {
                 endTimes.poll();
                 endTimes.add(intervals[i][1]);
             }
