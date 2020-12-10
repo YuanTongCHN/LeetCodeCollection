@@ -4,8 +4,8 @@ package indi.yuantongchn.LC75;
 
 class Solution {
 
-    /*
-     *
+    /*zero左边的全为0
+     *two右边的全为2
      *
      *
      * */
