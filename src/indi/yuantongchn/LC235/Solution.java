@@ -13,6 +13,7 @@ class TreeNode {
 }
 
 class Solution {
+    //注意利用二叉搜索树的特性
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null) {
             return null;
