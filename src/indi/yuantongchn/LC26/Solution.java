@@ -1,5 +1,7 @@
 package indi.yuantongchn.LC26;
 
+//26. 删除排序数组中的重复项
+
 class Solution {
     public int removeDuplicates(int[] nums) {
         int len = nums.length;
