@@ -1,8 +1,51 @@
 package indi.yuantongchn.LC165;
 
-class Solution {
-    public int compareVersion(String version1, String version2) {
+import java.security.KeyPair;
 
+class Solution {
+
+    public int compareVersion(String version1, String version2) {
+        int len1 = version1.length();
+        int len2 = version2.length();
+        int i1 = 0;
+        int i2 = 0;
+        while (i1 < len1 || i2 < len2) {
+            int[] pair1 = getNum(version1, len1, i1);
+            int[] pair2 = getNum(version2, len2, i2);
+            int num1 = pair1[1];
+            int num2 = pair2[1];
+            if(num1 > num2){
+                return 1;
+            }else if(num1 < num2){
+                return -1;
+            }
+            i1 = pair1[0] + 1;
+            i2 = pair2[0] + 1;
+        }
+        return 0;
+    }
+
+    private int[] getNum(String str, int len, int i) {
+        if (i >= len) {
+            return new int[]{len, 0};
+        }
+        int start = i;
+        while (i < len && str.charAt(i) != '.') {
+            i++;
+        }
+        int end = i;
+        int num;
+        if (start == end) {
+            num = 0;
+        } else {
+            num = Integer.parseInt(str.substring(start, end));
+        }
+        return new int[]{end, num};
+    }
+
+    /*
+    //时间空间复杂度不好
+    public int compareVersion(String version1, String version2) {
         String[] nums1 = version1.split("\\.");
         String[] nums2 = version2.split("\\.");
         int len1 = nums1.length;
@@ -42,5 +85,7 @@ class Solution {
             return 0;
         }
         return 0;
-    }
+    }*/
+
 }
+
