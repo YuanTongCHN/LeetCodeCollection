@@ -2,6 +2,8 @@ package indi.yuantongchn.LC171;
 
 import java.util.HashMap;
 
+//171. Excel表列序号
+
 class Solution {
     public int titleToNumber(String s) {
         int res = 0;
