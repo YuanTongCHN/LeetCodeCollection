@@ -12,11 +12,11 @@ class Solution {
             //第三个判定好好理解
             /*
             nums[nums[i] - 1] 为 nums[i] 应该在的位置的值
-            如果该值不等于num[i]
-            则交换，使该值等于nums[i]
-            并继续判断交换后的nums[i]对应的位置的值nums[nums[i] - 1]
+            如果该值不等于 num[i]
+            则交换，使该值等于 nums[i]
+            并继续判断交换后的 nums[i] 对应的位置的值  nums[nums[i] - 1]
             * */
-            while (nums[i] > 0 && nums[i] < len && nums[nums[i] - 1] != nums[i]) {
+            while (nums[i] > 0 && nums[i] <= len && nums[nums[i] - 1] != nums[i]) {
                 swap(nums, i, nums[i] - 1);
             }
         }
