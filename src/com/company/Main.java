@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
+
         String str = "1.0.01";
         String[] strs = str.split("\\.");
         for (String s : strs) {
