@@ -1,4 +1,4 @@
-package indi.yuantongchn.LC218;
+package indi.yuantongchn.LC218star;
 
 //218. 天际线问题
 
@@ -53,18 +53,15 @@ class Solution {
                 for (int height : temp) {
                     queue.add(height);
                 }
-                if(queue.peek() != lastHeight){
-                    isChange = true;
-                }
             }
             if(mapRemove.containsKey(step)){
                 List<Integer> temp = mapRemove.get(step);
                 for (int height : temp) {
                     queue.remove(height);
                 }
-                if(queue.peek() != lastHeight){
-                    isChange = true;
-                }
+            }
+            if(queue.peek() != lastHeight){
+                isChange = true;
             }
             if(isChange){
                 List<Integer> temp = new ArrayList<>();
