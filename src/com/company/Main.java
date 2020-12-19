@@ -2,16 +2,14 @@ package com.company;
 
 import java.util.HashMap;
 
+
+import indi.yuantongchn.LC212.Solution;
+
 public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        String str1 = "add";
-        String   str2 = "egg";
-        HashMap<Character, Character> map = new HashMap<>();
-        /*
+        Solution solution = new Solution();
 
-        */
-        //System.out.println(Integer.MAX_VALUE);
     }
 }
